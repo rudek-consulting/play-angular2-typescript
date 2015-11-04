@@ -1,0 +1,21 @@
+{
+  "name": "AngTest",
+  "version": "1.0.0",
+  "description": "Angular 2 Test",
+  "main": "",
+  "author": "Arne Rudek",
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "systemjs": "0.19.2"
+  },
+  "devDependencies": {
+    "typescript": "^1.6.2"
+  },
+  "scripts": {
+    "tsc-watch": "tsc -p app/assets -w --outfile public/javascripts",
+    "tsc": "tsc -p app/assets --outDir public/javascripts",
+    "server": "./activator run",
+    "go": "tsc -p app/assets --outDir public/javascripts ; ./activator run"
+  }
+}
