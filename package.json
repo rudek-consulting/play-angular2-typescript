@@ -13,7 +13,7 @@
     "typescript": "^1.6.2"
   },
   "scripts": {
-    "tsc-watch": "tsc -p app/assets -w --outfile public/javascripts",
+    "tsc-watch": "tsc -p app/assets -w --outDir public/javascripts",
     "tsc": "tsc -p app/assets --outDir public/javascripts",
     "server": "./activator run",
     "go": "tsc -p app/assets --outDir public/javascripts ; ./activator run"

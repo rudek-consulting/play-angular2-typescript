@@ -5,9 +5,9 @@
         <script src="@routes.Assets.versioned("node_modules/angular2/bundles/angular2.dev.js")" type="text/javascript"></script>
         <script>
         System.config({
-            packages: {'app': {defaultExtension: 'js'}}
+            packages: {'@routes.Assets.versioned("javascripts")': {defaultExtension: 'js'}}
         });
-        System.import('@routes.Assets.versioned("javascripts/app.js")');
+        System.import('@routes.Assets.versioned("javascripts/index")');
     </script>
     </head>
     <body>
