@@ -6,6 +6,7 @@ import { Location, RouteConfig, RouterLink, Router, RouterOutlet } from 'angular
 
 //import { LoggedInRouterOutlet } from './LoggedInOutlet';
 import { Home } from './home/home';
+import { Home2 } from './home2/home2';
 
 @Component({
     selector: 'auth-app'
@@ -13,14 +14,15 @@ import { Home } from './home/home';
 @View({
     templateUrl: "assets/app/app.html",
     //template: template,
-    directives: [RouterOutlet]
+    directives: [RouterOutlet, RouterLink]
     //,
     //directives: [ CORE_DIRECTIVES ]
 })
 @RouteConfig([
-    { path: '/', component: Home }
-    //{ path: '/',    redirectTo: '/home' },
-    //{ path: '/home',    as: 'Home',     component: Home}
+    //{ path: '/', component: Home }
+    { path: '/',    redirectTo: '/home' },
+    { path: '/home',    as: 'Home',     component: Home},
+    { path: '/home2',    as: 'Home2',     component: Home2}
     //,
     //{ path: '/home',    as: 'Home',     component: Home}
 ])

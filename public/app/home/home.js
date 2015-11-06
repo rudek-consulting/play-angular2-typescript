@@ -10,19 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+//import { ROUTER_DIRECTIVES, Router, RouteConfig, RouterOutlet, RouterLink } from 'angular2/router';
+var router_1 = require('angular2/router');
 //let template = require('./home.html');
 var Home = (function () {
-    function Home() {
+    function Home(router) {
+        this.router = router;
     }
+    Home.prototype.goToHome2 = function () {
+        this.router.parent.navigateByUrl('/home2');
+    };
     Home = __decorate([
         angular2_1.Component({
             selector: 'home'
         }),
         angular2_1.View({
-            directives: [angular2_1.CORE_DIRECTIVES],
+            directives: [router_1.RouterOutlet, router_1.RouterLink],
             templateUrl: "assets/app/home/home.html"
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], Home);
     return Home;
 })();

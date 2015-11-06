@@ -1,5 +1,8 @@
 import { Component, View, CORE_DIRECTIVES } from 'angular2/angular2';
-import { Router } from 'angular2/router';
+//import { ROUTER_DIRECTIVES, Router, RouteConfig, RouterOutlet, RouterLink } from 'angular2/router';
+
+import { Location, RouteConfig, RouterLink, Router, RouterOutlet } from 'angular2/router';
+
 
 //let template = require('./home.html');
 
@@ -7,11 +10,17 @@ import { Router } from 'angular2/router';
     selector: 'home'
 })
 @View({
-    directives: [CORE_DIRECTIVES],
+    directives: [RouterOutlet, RouterLink],
     templateUrl: "assets/app/home/home.html"
 
     //templateUrl: './home.html'
 })
 export class Home {
+    constructor(public router: Router) {
+
+    }
+    goToHome2() {
+        this.router.parent.navigateByUrl('/home2');
+    }
 
 }

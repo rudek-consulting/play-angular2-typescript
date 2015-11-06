@@ -11,33 +11,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var router_1 = require('angular2/router');
-//declare function require(name: string): any;
-//let template = require('./app.html');
-//import { LoggedInRouterOutlet } from './LoggedInOutlet';
-var home_1 = require('./home/home');
-var home2_1 = require('./home2/home2');
-var App = (function () {
-    function App(router) {
-        this.router = router;
+var Home2 = (function () {
+    function Home2() {
     }
-    App = __decorate([
+    Home2 = __decorate([
         angular2_1.Component({
-            selector: 'auth-app'
+            selector: 'home2'
         }),
         angular2_1.View({
-            templateUrl: "assets/app/app.html",
-            //template: template,
-            directives: [router_1.RouterOutlet, router_1.RouterLink]
-        }),
-        router_1.RouteConfig([
-            //{ path: '/', component: Home }
-            { path: '/', redirectTo: '/home' },
-            { path: '/home', as: 'Home', component: home_1.Home },
-            { path: '/home2', as: 'Home2', component: home2_1.Home2 }
-        ]), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], App);
-    return App;
+            directives: [router_1.RouterOutlet, router_1.RouterLink],
+            templateUrl: "assets/app/home2/home2.html"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Home2);
+    return Home2;
 })();
-exports.App = App;
-//# sourceMappingURL=app.js.map
+exports.Home2 = Home2;
+//# sourceMappingURL=home2.js.map

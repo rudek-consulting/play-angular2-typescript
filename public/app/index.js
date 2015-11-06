@@ -5,6 +5,7 @@ var app_1 = require("./app");
 angular2_1.bootstrap(app_1.App, [
     angular2_1.FORM_PROVIDERS,
     router_1.ROUTER_PROVIDERS,
-    http_1.HTTP_PROVIDERS
+    http_1.HTTP_PROVIDERS,
+    angular2_1.provide(router_1.LocationStrategy, { useClass: router_1.HashLocationStrategy })
 ]);
 //# sourceMappingURL=index.js.map
