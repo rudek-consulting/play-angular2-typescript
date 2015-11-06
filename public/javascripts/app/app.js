@@ -10,15 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var router_1 = require('angular2/router');
+//import { LoggedInRouterOutlet } from './LoggedInOutlet';
+var home_1 = require('../home/home');
 var App = (function () {
-    function App() {
+    function App(router) {
+        this.router = router;
     }
     App = __decorate([
         angular2_1.Component({
-            selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
-        }), 
-        __metadata('design:paramtypes', [])
+            selector: 'auth-app'
+        }),
+        angular2_1.View({
+            templateUrl: "assets/javascripts/app/app.html",
+            //template: template,
+            directives: [router_1.RouterOutlet]
+        }),
+        router_1.RouteConfig([
+            { path: '/', component: home_1.Home }
+        ]), 
+        __metadata('design:paramtypes', [router_1.Router])
     ], App);
     return App;
 })();
