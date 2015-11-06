@@ -11,8 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var router_1 = require('angular2/router');
+//declare function require(name: string): any;
+//let template = require('./app.html');
 //import { LoggedInRouterOutlet } from './LoggedInOutlet';
-var home_1 = require('../home/home');
+var home_1 = require('./home/home');
 var App = (function () {
     function App(router) {
         this.router = router;
@@ -22,7 +24,7 @@ var App = (function () {
             selector: 'auth-app'
         }),
         angular2_1.View({
-            templateUrl: "assets/javascripts/app/app.html",
+            templateUrl: "assets/app/app.html",
             //template: template,
             directives: [router_1.RouterOutlet]
         }),

@@ -20,7 +20,7 @@ var Home = (function () {
         }),
         angular2_1.View({
             directives: [angular2_1.CORE_DIRECTIVES],
-            templateUrl: "assets/javascripts/home/home.html"
+            templateUrl: "assets/app/home/home.html"
         }), 
         __metadata('design:paramtypes', [])
     ], Home);

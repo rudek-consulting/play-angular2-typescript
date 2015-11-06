@@ -11,12 +11,13 @@
 
     "declaration": true,
     "noLib": false,
-    "listFiles": true
+    "listFiles": true,
+    "outDir": "public/app"
   },
   "exclude": [
     "node_modules"
   ],
   "files": [
-    "public/javascripts/index.ts"
+    "app/assets/app/index.ts"
   ]
 }

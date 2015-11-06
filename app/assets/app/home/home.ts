@@ -8,7 +8,7 @@ import { Router } from 'angular2/router';
 })
 @View({
     directives: [CORE_DIRECTIVES],
-    templateUrl: "assets/javascripts/home/home.html"
+    templateUrl: "assets/app/home/home.html"
 
     //templateUrl: './home.html'
 })

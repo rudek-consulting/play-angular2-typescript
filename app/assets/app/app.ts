@@ -1,14 +1,17 @@
 import { View, Component, CORE_DIRECTIVES } from 'angular2/angular2';
 import { Location, RouteConfig, RouterLink, Router, RouterOutlet } from 'angular2/router';
 
+//declare function require(name: string): any;
+//let template = require('./app.html');
+
 //import { LoggedInRouterOutlet } from './LoggedInOutlet';
-import { Home } from '../home/home';
+import { Home } from './home/home';
 
 @Component({
     selector: 'auth-app'
 })
 @View({
-    templateUrl: "assets/javascripts/app/app.html",
+    templateUrl: "assets/app/app.html",
     //template: template,
     directives: [RouterOutlet]
     //,
